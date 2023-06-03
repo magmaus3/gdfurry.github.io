@@ -1,3 +1,5 @@
+/* vim:fileencoding=utf-8:foldmethod=marker 
+ */
 @import "https://gdfurry.eu.org/branding/var.css";
 
 html, body {
@@ -21,9 +23,10 @@ body {
     padding: 0.5rem;
     background-color: var(--secondary);
     color: black;
-    min-height: 3rem;
+    height: 4rem;
 }
 
+/* Links {{{ */
 #topbar a {
     padding: 1em;
     margin: 0rem 0.2rem;
@@ -32,7 +35,7 @@ body {
     border-radius: 10px;
 
     /* Hover effect */
-    transition: background-color 200ms ease, box-shadow 200ms ease;
+    transition: background-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -42,9 +45,46 @@ body {
     }
 }
 
+/* "Mefi style" hover {{{ */
+
+#topbar a {
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .4s;
+}
+
+
+/* }}} */
+
+/* "Link style" hover {{{ */
+#topbar a:hover {
+    color: var(--third);
+    /* text-shadow: 0px 0px 15px black; */
+}
+/* }}} */
+
+/* "Button style" hover {{{
 #topbar a:hover {
     background-color: var(--third);
     box-shadow: 0px 0px 15px var(--third);
+}
+}}} */
+/* }}} */
+
+/* Logo {{{ */
+#topbar #logo {
+   height: 100%;
+   margin-right: 1em;
+}
+#topbar #logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
 }
 
 #main {
@@ -56,6 +96,7 @@ body {
 
     white-space: pre-line;
 }
+/* }}} */
 
 a {
     color: inherit;
