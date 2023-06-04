@@ -24,6 +24,8 @@ body {
     background-color: var(--secondary);
     color: black;
     height: 4rem;
+
+    font-weight: bold;
 }
 
 /* Links {{{ */
@@ -32,7 +34,7 @@ body {
     margin: 0rem 0.2rem;
     color: inherit;
     background-color: transparent;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 
     /* Hover effect */
     transition: background-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
@@ -48,22 +50,23 @@ body {
 /* "Mefi style" hover {{{ */
 
 #topbar a {
-    background-image: linear-gradient(#000000, #000000);
-    background-size: 0 100%;
+    background-image: linear-gradient(to bottom, var(--third) 0 0);
+    background-position: bottom;
+    background-size: 100% 0;
     background-repeat: no-repeat;
-    transition: .4s;
+    transition: .4s ease;
 }
-
+#topbar a:hover {
+  background-size: 100% 100%;
+}
 
 /* }}} */
 
-/* "Link style" hover {{{ */
+/* "Link style" hover {{{ 
 #topbar a:hover {
     color: var(--third);
-    /* text-shadow: 0px 0px 15px black; */
 }
-/* }}} */
-
+ }}} */
 /* "Button style" hover {{{
 #topbar a:hover {
     background-color: var(--third);
